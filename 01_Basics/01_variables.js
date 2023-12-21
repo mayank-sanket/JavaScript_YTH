@@ -19,4 +19,6 @@ console.table([accountId, accountEmail, accountPassword, accountCity]) // printi
 /*
 Prefer not using var
 because of issues in block issues and functional issues
+
+Read More in "01_variables.txt" file
 */
