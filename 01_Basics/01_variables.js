@@ -3,7 +3,7 @@ let accountEmail = "mayank@gmail.com"
 var accountPassword = "x7ThalaForA_Reason"
 accountCity = "Bhopal" //JS supports this way of creating variables also (not recommended tho)
 
-// accountId = 234 // not allowed to change the value of a const
+// accountId = 234 // not allowed to change the value of a const (it will throw an error if you change the value of const)
 
 accountEmail = "mayank2@gmail.com"
 accountPassword = "ThalaForever"
