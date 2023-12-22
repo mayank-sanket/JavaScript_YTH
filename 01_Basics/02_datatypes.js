@@ -1,3 +1,5 @@
+// Data Types and ECMA standards
+
 // the earlier JS did not have the features of arrows, classes, modules, etc
 // but the latest JS has these features
 
