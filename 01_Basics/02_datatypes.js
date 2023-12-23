@@ -24,4 +24,4 @@
 
 // console.log(3+2); console.log("Mayank")  // here the semicolon was mandatory
 
-// for documentation, use MDN or ECMA. ECMA is the official JS documentation
+// for documentation, use MDN or ECMA. ECMA is the official JS documentation // tc39
