@@ -24,4 +24,34 @@
 
 // console.log(3+2); console.log("Mayank")  // here the semicolon was mandatory
 
-// for documentation, use MDN or ECMA. ECMA is the official JS documentation // tc39
+// for documentation, use MDN or ECMA. ECMA (tc39) is the official JS documentation, however, most of the time we see MDN docs
+
+// Data Types 
+//number, string, bigint, boolean, null, undefined, symbol | primitive
+// object | non-primitive
+// in total 8 data types in JS
+let name = "Mayank" // String data type
+let age = 22
+let isLoggedIn = true
+
+// number (range: )
+// bigint  (used in stock trading or large websites, such as Facebook, etc)
+// string (can be used in single quotes as well as double quotes)
+// boolean (true/false)
+// null : it is actually a stand-alone value
+let place = null // empty or khali(instead of using 0 many times, we prefer using null as zero is a value and might affect the code, eg, temperature = 0 is a value but temp = null isn't)
+// undefined : example-
+let state = "" // type is string but undefined
+
+// symbol (used to find uniqueness, or individual components used in React)
+// object
+
+// knowing the type of data : different ways
+
+let firstName = "Mayank"
+console.log(typeof(firstName)) // prints "string"
+
+console.log(typeof(23)) // prints "number"
+console.log(typeof "Mayank") // prints "string"
+console.log(typeof null) // prints "object" | that means "null" is an object
+console.log(typeof undefined) // prints "undefined" | type of "undefined" is undefined
