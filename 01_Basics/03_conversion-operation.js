@@ -1,3 +1,3 @@
 // About data type conversions in JS
 let name = "Mayank"
-// cmt
+console.log(98989898);
