@@ -89,4 +89,4 @@ console.log(typeof stringSomeNumber) // prints string
 
 
 
-// Next 
+// Next part in next file named conversion-operation2.js
