@@ -66,7 +66,7 @@ true => 1; false =>0;
 let isLoggedIn = 2; 
 let booleanIsLoggedIn = Boolean(isLoggedIn) // converts into boolean
 
-console.log(booleanIsLoggedIn) // prints true if isLoggedIn was assigned 0
+console.log(booleanIsLoggedIn) // prints true if isLoggedIn was assigned 2
 
 // in all the cases where isLoggedIn is any non-zero value (say 2), console.log(booleanIsLoggedIn) prints true
 
