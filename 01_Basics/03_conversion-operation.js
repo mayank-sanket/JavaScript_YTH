@@ -86,3 +86,7 @@ let stringSomeNumber = String(someNumber)
 console.log(stringSomeNumber) // prints 332 (string) | in order to verify this, do this: 
 
 console.log(typeof stringSomeNumber) // prints string
+
+
+
+// Next 
