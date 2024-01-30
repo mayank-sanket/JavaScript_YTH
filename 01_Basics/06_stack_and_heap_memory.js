@@ -15,10 +15,12 @@ console.log(myYouTubeName); // prints MayankSanket  (because Stack memory | prim
 
 // ++++++++++++++++++++++++++++++++++++++++++
 
+
 let userOne = {
     email: "usrem@gmail.com",
     upi: "user@ybl",
     city: "New Delhi", 
+    age: 22
 
 }
 
