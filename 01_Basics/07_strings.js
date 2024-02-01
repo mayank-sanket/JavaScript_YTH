@@ -1,5 +1,3 @@
-
-
 // You can use both '' and "" for strings in JS
 
 // old syntax for concatenation:
