@@ -136,3 +136,5 @@ const veryBigString2 = "mayank is a very good developer"
 console.log(veryBigString2.split(" ")) // [ 'mayank', 'is', 'a', 'very', 'good', 'developer' ]
 
 console.log(veryBigString2.split(" ", 3)) // prints the first 3 elements in the array: [ 'mayank', 'is', 'a' ]
+
+// read more about string methods in MDN docs and do practice
