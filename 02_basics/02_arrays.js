@@ -65,6 +65,24 @@ console.log(Array.from("Mayank"));  // [ 'M', 'a', 'y', 'a', 'n', 'k' ]
 console.log(Array.from({name: "monkey"})) // prints [] because you did not specify whose array you want, of keys or of values
 
 
+let name = {
+    firstname: "Mayank",
+    lastname: "Sanket"
+}
+
+
+
+
+// what will happen if you try to print an array from a constant number? : try yourself
+
+
+// printing array from objects
+
+
+
+console.log(Array.from(name.lastname));  // prints ['S', 'a', .... uptil t]
+console.log(Array.from(name.firstname)); // prints an array with the letters of "Mayank"
+ 
 let score1 = 100
 let score2 = 200
 let score3 = 300
