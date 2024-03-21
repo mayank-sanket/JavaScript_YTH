@@ -36,6 +36,7 @@ let x = 10, y = 10
 console.log(multiplyTwoNos(x,y)) // prints 100
 
 // or
+
 const fxnvariable = multiplyTwoNos(9,10)
 console.log(fxnvariable); // prints 90
 
