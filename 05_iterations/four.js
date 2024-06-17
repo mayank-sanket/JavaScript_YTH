@@ -1,3 +1,4 @@
+
 const myObject = {
     js: 'JavaScript',
     cpp: 'C++',
@@ -80,7 +81,7 @@ Map(3) {
 
 // note: map is not iteratable with for in loop
 for (const key in map) {
-    console.log(key) // prints notihing
+    console.log(key) // prints nothing
     
 }
 

@@ -1,0 +1,83 @@
+
+<!-- Edit and Remove Elements using DOM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // adding elements by creating a function
+    function addLanguages(langName){
+    const li = document.createElement('li')
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li)
+}
+
+addLanguages("Python")
+addLanguages("TypeScript")
+
+
+// optimised approach when there are multiple items alreay and you don't want to traverse throughout
+
+function optimisedLang(langName){
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    
+    // or
+    //--------------------------
+    // const addText = documentl.createTextNode(langName)
+    // li.appendChild(addText)
+    // ------------------------
+
+    document.querySelector('.language').appendChild(li)
+
+
+
+}
+
+optimisedLang("Java")
+//--------------------------------------------------------
+
+// Editing the values
+const secondLang = document.querySelector("li:nth-child(2)")
+// method 1: 
+// ----- 
+// secondLang.innerHTML = "Mojo" 
+//----
+
+// medhod 2: optimised
+//-----
+const newli = document.createElement('li')
+newli.textContent ="Mojo"
+secondLang.replaceWith(newli);
+
+//----
+
+//----------------------------------------------------
+
+// another way : replace JavaScript with C++
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML = '<li>C++</li>'
+
+
+
+
+
+
+
+//------------------------------
+
+// removing element
+//eg: remove Java (last lang)
+const lastLang = document.querySelector('li:last-child')
+lastLang.remove()
+</script>
+
+</html>

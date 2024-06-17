@@ -1,0 +1,209 @@
+<!-- read more about HTMLCollections, NodeList and Prototypes -->
+
+
+<!-- we can use forEach loop in NodeList -->
+ <!-- how to use forEach loop in HTML collection? ans: by converting into Array -->
+<!-- 
+
+    1. querySelectorAll() returns NodeList
+    2. getElementByClassName returns HTMLCollection
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning on Chai aur Code <span style="display: none;">test hidden text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+
+    </div>
+</body>
+</html>
+
+
+<!--  
+    NOTES
+
+
+1. to get a particular element by id:
+   eg: document.getElementById('title')
+
+
+
+2. to get info about that particular element : 
+eg: document.getElementById('title').title
+
+eg: document.gEBI('title').class ==> undefined
+
+then how? document.gEBI('title').className == no error
+
+this is the reason why we use className in React
+
+-------------------
+example: document.getElementById('title').getAttribute('id') // prints 'title'
+
+document.getElementById('title').getAttribute('class') || prints 'heading'
+
+
+similarly, there is setAttribute : working - 
+document.getElementById('title').setAttribute('class', 'test')
+
+note: if you print it, it gives undefined, but when you see the class of that element, it has 'test' which was there after OVERRIDING the already existing class named 'heading'
+
+* how to prevent from overriding class?
+
+document.getElementById('test').setAttribute('class', 'test heading') -- this sets two classes, ie test and heading
+
+# storing in a variable
+
+const title = document.getElementById('title')
+
+-- if you print title in the console, you get this element
+
+# inserting style in the element
+
+title.style.backgroundColor = 'green'
+
+title.style.padding = "15px"
+
+title.style.borderRadius = "10px"
+
+------------------------------------
+
+#some other things: 
+
+.innerText and .textContent
+
+
+title.innerText   and title.textContent will generally give the same results but they give different result if you have some content's display set to none 
+
+example - title.innerText: 'DOM learning on Chai aur Code' 
+          title.textContent: 'DOM learning on Chai aur Code test hidden text'
+
+
+.innerHTML:  also gives the inner HTML contents of the element with the text 
+eg: title.innerHTML : 'DOM Learning on Chai aur Code <span style="display: none;">test hidden text</span>'
+
+
+============================================
+
+In the same way as getElementById, we have getElementByClassName('')
+
+_____________________________________________________
+
+QuerySelector - allows you to select based on class or id | (.classKaNaam or #idKaNaam)
+
+eg: 
+document.querySelector('h2') | selects the FIRST h2 element
+
+eg: 
+document.querySelector(#title) | selects the element with id 'title'
+
+eg: 
+document.querySelector(.heading) | selects the element with class 'heading'
+
+eg: good one: 
+
+document.querySelector('input[type="password"]') | selects the input with attribute type = "password"
+
+eg: 
+document.querySelector('p:first-child')
+
+      * suppose you want to change the color of the first list item of the unordered list
+
+      -> document.querySelector('ul')
+      -> store it in variable: const myUl = document.querySelector('ul')
+
+      -> now do this:  myUl.querySelector('li')  | selects the first list item
+
+      -> now again store it in a variable, 
+       const turnGrren = myUl.querySelector('li')
+
+       -> now you can change the background color of the first list item and change padding | you can also change the content inside it
+
+       turnGreen.style.backgroundColor = "green"
+
+       turnGreen.style.padding="10px"
+
+       turnGreen.innerText="nine"
+
+    * instead of creating variables again and again, you can also do like: 
+
+    document.querySelector('ul').querySelector('li').innerText="nine"
+
+    or
+
+    document.querySelector('ul').querySelector('li').style.padding = "10px"
+
+    =========================IMPORTANT =================
+
+
+    querySelectorAll()
+
+  eg: document.querySelectorAll('li')  | it gives a NodeList(3) [li, li, li]
+  when you click the prototype, you see forEach option there
+  can we use maps here? let's see
+
+  const tempLiList = document.querySelectorAll('li')
+  
+  print it on console and expand the prototype | here, forEach is available but not map
+  // if you try to change the color like: tempLiList.style.color = 'green' | it does not work because it is NodeList
+
+  // how to do it? 
+  tempLiList[0].style.color = 'green' | it works
+  tempLiList[1].style.color = 'blue' | it works
+
+
+  // using forEach loop in NodeLists
+
+  tempLiList.forEach(function(lst){
+    lst.style.backgroundColor='pink'
+  })
+
+  //
+
+  Q: what if there is only one list item? will it work like this? document.querySelectorAll('li').style.backgroundColor='pink'? No
+
+  how to do this then? document.querySelectorAll('li')[0].sytle.backgroundColor='pink'
+
+  ===============
+
+
+getElementByClassName()  
+
+eg: getElementByClassName('list-item') | returns a HTMLCollection
+
+there is no concept of looping in HTMLCollections, then how do we apply loop in it? ans: convert it into an array
+
+eg: steps
+
+1. const HTMLCOllectArr = document.getElementByClassName('list-item')
+
+2. const modifiedArr = Array.from(HTMLCollectArr)
+
+3. modifiedArr.forEach(function(lst){
+    lst.style.backgrondColor='pink'
+})
+
+
+--> 

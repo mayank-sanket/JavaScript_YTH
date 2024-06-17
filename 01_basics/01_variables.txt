@@ -4,8 +4,7 @@ Function Scoping vs. Block Scoping
 
 var is function-scoped, which means it is only scoped within the function where it is declared. If a variable is declared using var inside a block (e.g., an if statement or a loop), it is accessible throughout the entire function, leading to potential issues and unintended behavior.
 let is block-scoped, meaning it is only accessible within the block (enclosed by curly braces) where it is declared. This is generally considered more intuitive and less error-prone.
-javascript
-Copy code
+
 function example() {
   if (true) {
     var x = 10; // function-scoped

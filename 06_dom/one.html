@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 id="title" class="heading">DOM Learning on Chai aur <Code></Code></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+    </div>
+</body>
+</html>
+
+
+<!-- Notes
+
+
+when you type console.log(window) in the browser, you get a lot of things
+
+one of the important things is - document
+
+to get it, console.log(Window.document) or console.log(document) - to get the document
+
+to get detailed info about document, type console.dir(document) - only if needed
+
+to get a particular thing from document, eg:  console.log(document.baseURI) | console.log(document.links) | console.log(document.links[2])
+
+* the concept of HTMLCollection
+
+
+
+Window -> document -> HTML -> 1. Head,  2. Body
+
+Head -> 1. title ->text node, 2. Meta -> attribute
+
+body -> 1. div ->attribute | child -> h1, p
+
+h1 -> text node | p -> text node
+
+
+----------------------------------------
+some DOM manipulations: 
+
+document.getElementById('firstHeading').innerHTML = "<h1>Chai aur Code</h1>"
+-->

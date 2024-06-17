@@ -1,0 +1,83 @@
+<!-- How to create new elements in DOM -->
+
+<!-- note: the classic for loop runs in anything which looks like an array, eg HTML collection -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent) // prints the parent div in the console 
+
+    console.log(parent.children) // prints HTMLCollection with 4 elements
+
+    console.log(parent.children[1]) // prints <div class="day">Tuesday</div> in the console
+
+    console.log(parent.children[1].innerHTML) // prints Tuesday
+
+    console.log("new line")
+
+    // ================================
+
+    // for loop in HTML collection (without converting to array)
+   for(let i=0; i<parent.children.length; i++){
+    console.log(parent.children[i].innerHTML) // 
+
+    // prints Monday | Tuesday | Wednesday | Thursday in new lines
+   }
+
+
+//    styling a particular children of the parent
+   parent.children[1].style.backgroundColor = 'pink'
+
+console.log("newline")
+
+   // some other properties
+   console.log(parent.firstElementChild) // prints <div class="day">Monday</div>
+   console.log(parent.lastElementChild) // prints <div class="day">Thursday</div>
+
+  console.log(parent.secondElementChild) // UNDEFINED
+
+
+  //Moving from Child to parent? how?
+
+  const dayOne = document.querySelector('.day') // first element with class "day" selected
+  console.log(dayOne)  // <div class="day">Monday</div>
+
+  // moving to parent element of the particular element
+
+  console.log(dayOne.parentElement) // <div class="parent"><div>*4(monday to thursday)</div></div>
+
+// next Element Sibling
+
+console.log(dayOne.nextElementSibling) // <div class="day">Tuesday</div>
+
+// IMPORTANT: childNodes
+// concept of NodeList -- important
+
+console.log("NODES: ", parent.childNodes) // prints NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+// includes things like line breaks, comments, etc - concept 
+
+
+// note: every element has a childNode
+console.log(dayOne.childNodes) // NodeList(1)  [text]
+
+
+
+//________________________________________________
+
+
+</script>
+</html>
