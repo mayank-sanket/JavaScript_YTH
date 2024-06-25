@@ -1,0 +1,71 @@
+ 
+<!-- XMLHttpRequest --> 
+
+ <!-- XMLHttpRequest is heavily used in AJAX programming -->
+  <!-- 
+ 
+
+ 
+ 
+  -->
+ <!-- MDN web docs -->
+
+
+ <!-- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest -->
+
+ <!-- task, get the photo of the user and print the number of followers and create a card on click of a particular button -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <pre>
+
+
+
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+    </pre>
+
+</body>
+
+<script>
+    const requestUrl = 'https://api.github.com/users/mayank-sanket'
+    const xhr = new XMLHttpRequest()
+
+    // xhr.open('GET', 'https://api.github.com/users/mayank-sanket' )
+
+    xhr.open('GET', requestUrl)
+
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState) 
+
+        if(xhr.readyState == 4){
+            // const data =  this.responseText
+
+            // console.log(typeof data) // string
+
+            // console.log(data)
+            // console.log(data.followers) // prints undefined
+
+            // to avoid that, we will have to convert the data into JSON
+            
+            const data = JSON.parse(this.responseText)
+
+            console.log(typeof data) // object
+
+            console.log(data.followers) // prints the number of followers
+            console.log(data.following) // following count
+            
+        }
+    }
+   
+    xhr.send()
+</script>
+</html>

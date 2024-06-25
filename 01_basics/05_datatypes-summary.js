@@ -1,9 +1,7 @@
 // two kinds of data types: 1. primitive  types 2. non- primitive (or reference types)
 
-// 1. Primitive: 7 types: String, Number, Boolean, null undefined, Symbol, BigInt
+// 1. Primitive: 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
 
-// note: JS is a dynamically typed language
-// for type safety in JS, we use TypeScript
 
 // null is a kind of object which is void
 

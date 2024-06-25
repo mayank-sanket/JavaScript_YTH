@@ -1,7 +1,4 @@
-// if
-// if(condition is true){ // code is executed}
 
-// ex: 
 if(true){
     console.log("Hey!")
 }

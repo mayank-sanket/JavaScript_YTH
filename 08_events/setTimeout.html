@@ -1,0 +1,63 @@
+<!-- setTimeout and clearTimeout -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading1">Hello, this is Mayank Sanket!</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // setTimeout syntax
+
+   setTimeout(function(){
+        console.log("hello")
+    }, 2000)
+
+    // or
+
+
+//    const sayHello = function(){
+//     console.log("hello")
+//    }        
+
+//    setTimeout(sayHello, 2000)
+
+
+
+   // we can store this in a variable too
+
+//    const doTask = setTimeout(sayHello, 2000)
+
+   // now, there is this thing called clearTimeout 
+
+//    const stop = function(){
+//     clearTimeout(doTask)
+//    }
+
+//    document.getElementById('stop').addEventListener('click', function(){
+//     stop()
+//    }, false)
+
+// -------------------------------------------------------------------------------------
+
+// write code such that the inner text of the heading "Hello, this is Mayank Sanket!" should change to "The best developer"
+
+// also add functionality to stop the text from being printed if the user clicks on "Stop" button within before 2 seconds
+
+const changeText = function(){
+    document.getElementById('heading1').innerHTML = "The best developer"
+}
+
+const doWork = setTimeout(changeText, 2000);
+
+document.getElementById('stop').addEventListener('click', function(){
+    clearTimeout(doWork)
+})
+</script>
+</html>

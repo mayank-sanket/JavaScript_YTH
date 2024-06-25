@@ -1,0 +1,10 @@
+Create a "Guess the Number" game
+
+
+BUGS to fix -- 
+
+// to do : fix this -1 thing when attempts are over
+// to do: enable button for starting new game -- fix this bug ASAP
+
+
+// to do: fix one more bug -- when you enter the correct guess in the last attempt, then there is the message of game over only and not of you winning the game, fix this

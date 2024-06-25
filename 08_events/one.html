@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+
+<script>
+    // you can add onclick attribute in any element like this <img src = "abc.jpg" onclick = "alert("hello")"> 
+    // not recommended to use it in plain HTML and JS development | not scalable | however in React you can use it and there it is scalable
+
+    // better way:
+    document.getElementById('owl').onclick = function(){
+        alert("You clicked the image with id: owl ")
+
+    }
+// the above way is good but still, it has less features than using the events method
+// in events, you have features such as event bubbling, etc
+
+// best way:    |aEL('eventName', fxn, false) | by default the third parameter is false | you can also avoid the third parameter
+
+document.getElementById('photoshop').addEventListener('click', function(){
+alert("image with the id photoshop clicked")
+}, false)
+
+// there is another way called, attachEvent() in JS | used in early days
+// in jQuery there is this thing called "on" event 
+
+
+
+document.getElementById('river').addEventListener('click', function(e){
+    alert("the image with id is clicked")
+
+    // her "e" is an object
+    console.log(e)  // pointerEvent {.........such as timestamp, window, etc. with multiple properties}
+
+    console.log(e.target)  // the element itself (<img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="">)
+    
+    console.log(e.x); // x coordinate of click position
+    console.log(e.y);  // y coordinate of click position
+
+    //application of the above things: example, create a circle where the image is clicked in the browser window
+
+    // type, timestamp, preventDefault(), defaultPrevented, etc.
+    // target
+    // toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY, tiltX, tiltY, etc.
+
+    // altKey, ctrlKey, shiftKey, keyCode - many more events | read more and try to create some projects based on them
+
+    //----------------------------------------------------
+
+
+  
+})
+
+  // about the third parameter: true/false
+
+//   first understand Event propagation | it has two contexts: 1. event bubling 2. event capturing
+    
+// bubbling up : lower to higher | EVENT BUBBLING | when the third parameter is false | used in most of the projects
+
+    
+// document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the unordered list")
+    // }, false)
+
+    // document.getElementById('prayer').addEventListener('click', function(e){
+    //     console.log("prayer clicked")
+    // }, false)
+
+               // it first prints "prayer clicked" and then prints "clicked inside the unordered list" 
+
+    
+
+    // ---------------------------------
+
+    // how to prevent the above thing? ans: set the third parameter to true  | this makes outer to innner | EVENT CAPTURING
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the unordered list")
+    // }, true)
+
+    // document.getElementById('prayer').addEventListener('click', function(e){
+    //     console.log("prayer clicked")
+    // }, true)
+
+// it first prints 'clicked inside the unordered list' and then prints 'prayer clicked'
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// Event Capturing or Event Bubbling usage depends on use case
+
+// what if you only want to print "prayer clicked" and not "clicked inside the unordered list"?
+  
+document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the unordered list")
+    }, false)
+
+    document.getElementById('prayer').addEventListener('click', function(e){
+        console.log("prayer clicked")
+        e.stopPropagation(); // this time it only prints 'prayer clicked' | the outer is not printed
+    }, false)
+
+
+//-------------------------------------------------------------------------
+
+// preventDefault method
+// example: use the preventDefault method on a clickable link
+
+document.getElementById('google').addEventListener('click', function(e){
+    e.preventDefault();
+    // now you can't visit the link by clicking it
+}, false)
+    
+
+    
+</script>
+</html>

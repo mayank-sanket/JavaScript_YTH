@@ -1,0 +1,92 @@
+<!-- setInterval and clearInterval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>hey there</h1>
+    <h3 id="tm">Time</h3>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+</body>
+<script>
+    
+// ----------------------------------------------------------
+
+    // way 1: 
+
+    // setInterval(function(){
+    //     console.log("Hello")
+    // }, 3000)
+
+
+    // way 2
+
+    // abc = function(){
+    //     console.log("hey")
+    // }
+
+    // setInterval(abc, 3000)
+
+    //--------------------------------
+    
+    // storing setInterval in a variable
+
+
+
+    // const asdf = function(){console.log('hello')}
+    // const printHelloWorld = setInterval(asdf, 4000)
+
+    //--------------------------------------------------------
+
+    // setInterval(function(){
+    //     console.log(Date.now());
+    // }, 2000)
+
+
+    // using setInterval with the third parameter
+
+    // const greet = function (personNaame){
+    //     console.log(`Hello ${personNaame}`)
+    // }
+
+    // setInterval(greet, 1000, "Mayank")
+
+    // how to stop the event from repeating again and again?
+
+    // clearInterval(printHelloWorld)
+
+
+    // ---------------------------------------------------------------------------------
+
+    // task 1: on clicking the start button, start printing the time in the console and on clicking the stop button, stop printing the dates in the console
+
+  
+   let printCurrentTime= function  (){
+    let time = new Date();
+    document.getElementById('tm').innerHTML = time.toLocaleTimeString();
+   }
+
+   
+  let qwerty; // did this to avoid local variable issue inside the function
+
+   document.getElementById('start').addEventListener('click', function(){
+     qwerty = setInterval(printCurrentTime, 1000)
+    
+   })
+
+
+   document.getElementById('stop').addEventListener('click', function(){
+    
+    
+    clearInterval(qwerty);
+
+   })
+</script>
+</html>

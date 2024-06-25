@@ -1,0 +1,98 @@
+<!-- Write code to do the following: 
+ 1. create a start button
+ 2. create a stop button
+ 3. on clicking the start button, the background color of the page should change randomly after every second
+ 4. on clicking the stop button, the background color of the page should stop changing -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RANDOM BACKGROUD COLOR</title>
+  </head>
+  <body id="bdy" style="background-color: #212121; color: #fff">
+    <!-- <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav> -->
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+
+    <script>
+      let hex = "0123456789ABCDEF";
+      let color;
+      function randomColor() {
+        color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += hex[Math.floor(Math.random() * 16)];
+        }
+
+        return color;
+      }
+    
+    const changeBackgroundColor = function(){
+        randomColor()
+        document.getElementById('bdy').style.backgroundColor = color;
+    }
+
+    let startAction;  // declared it here to avoid scoping issue while handling clearInterval 
+
+    document.getElementById('start').addEventListener('click', function(){
+        startAction = setInterval(changeBackgroundColor, 1000)
+    })
+    
+    document.getElementById('stop').addEventListener('click', function(){
+        clearInterval(startAction)
+    })
+      
+// ________________________________________________________________________
+
+    // hitesh sir's code 
+
+    /* 
+
+    const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+    
+    
+    
+    
+    */
+
+      
+    </script>
+  </body>
+</html>

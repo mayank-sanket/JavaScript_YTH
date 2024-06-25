@@ -5,12 +5,7 @@
 console.log((3<5)) // prints true
 console.log(typeof (2<3)) // prints boolean
 
-/**
-some comparision operators: <, >, ==, !=, >=, <= 
 
- */
-
-// comparision of data of different data types 
 
 console.log("3">2) // prints true (JS automatically converted string to number)
 console.log("009">9) // prints false (as "009" when converted to number equals 9)

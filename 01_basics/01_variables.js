@@ -15,16 +15,4 @@ accountEmail = "mayank2@gmail.com"
 accountPassword = "ThalaForever"
 accountCity = "New Delhi"  
 
-// accountEmail, accountPassword, accountCity can be modified
-
-
-// console.log(accountId)  // for this we have to use console.log() for every variable to get printed
-
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState]) // printing all variables at the same time in a tabular format with index numbers
-
-/*
-Prefer not using var
-because of issues in block issues and functional issues
-
-Read More in "01_variables.txt" file
-*/
