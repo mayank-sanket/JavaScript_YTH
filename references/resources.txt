@@ -1,0 +1,4 @@
+ 
+ WESBOS: https://wesbos.com/javascript/13-ajax-and-fetching-data/74-ajax-and-apis#json
+
+MDN Web Docs: 

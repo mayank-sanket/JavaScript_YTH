@@ -1,9 +1,10 @@
 
 const promiseOne = new Promise(function(resolve, reject){
 // do an async task
-// DB calls, cryptography, network, etc
+// DB calls, cryptography, network calls, etc
 
 // for illustration, let's work with setTimeout here
+
 setTimeout(function(){
     console.log('Async task is completed')
     resolve() // resolve function is called here 
@@ -12,6 +13,7 @@ setTimeout(function(){
 })
 
 // .then is connected to resolve
+
 promiseOne.then(function(){
     console.log("Promise consumed")
 })
@@ -112,9 +114,9 @@ async function getAllUsers(){
    try{
     const  response = await fetch('https://jsonplaceholder.typicode.com/users')
 
-//    const data = response.json() // this too takes a long time
 
-const data = await response.json() // you have to use await keyword here as well
+
+const data = await response.json() // you have to use await keyword here as well || this too takes a long time
    console.log(data)
    }
    catch(error){ 
