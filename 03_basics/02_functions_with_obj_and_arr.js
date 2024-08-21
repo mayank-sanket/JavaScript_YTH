@@ -7,7 +7,7 @@ return num1
 }
 
 console.log(calculateCartPrice(2))
-
+            
 // what if you passed multiple arguments in a function which accepts only one argument
 
 console.log(calculateCartPrice(200, 300, 400)) // prints 200 only
@@ -25,7 +25,7 @@ console.log(calculateCartPrice2(100, 200, 300)); // prints [100, 200, 300]  (an 
 function cCP3(val1, val2, ...num1){
     return num1
 }
-
+    
 console.log(cCP3(200, 300, 400, 500)); // prints [400, 500]
 
 
@@ -39,8 +39,8 @@ const user = {
     price: 199
 }
 
-function handleObject(anyoject_here){
-console.log(`Username is ${anyoject_here.username} and price is ${anyoject_here.price}`)
+function handleObject(anyobject_here){
+console.log(`Username is ${anyobject_here.username} and price is ${anyobject_here.price}`)
 }
 
 // passing as variable

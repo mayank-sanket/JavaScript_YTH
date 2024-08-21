@@ -44,7 +44,7 @@ for(let i=1; i<=10; i++){
 
 // +++++++++++++++
 let myArray = ["mayank", "priyank", "sanket"]
-for (let index = 0; index < myArray.length; index++) { // notice that < is used and not <=
+for (let index = 0; index < myArray.length; index++) {
     const element = myArray[index];
 
     console.log(element) 

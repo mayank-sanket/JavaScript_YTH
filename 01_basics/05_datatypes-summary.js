@@ -23,7 +23,7 @@ console.log(anotherId); // prints Symbol(123)
 console.log(id); // prints Symbol(123)
 
 // BigInt
-// const bigNumber = 232323232323232323232323232323233232323232323;  // it shows message (too large to be represented), therefore add n in the end of number like this
+// const bigNumber = 232323232323232323232323232323233232323232323;  // it shows message (too large to be represented), therefore append n at the end of number like this
 const bigNumber = 22222222222222222222222222222222222222n;
 console.log((bigNumber));
 console.log(typeof bigNumber); // prints bigint

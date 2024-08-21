@@ -1,17 +1,17 @@
-let str2 = "hello mayank"
+let count  = 0;
+let str = "string zxc";
+let len = str.length;
 
-function lenwithoutspace(str){
-    let count = 0
-    for(s in str){
-        // if(s == " "){
-        //     continue
+let fxn = function(str){
+    for(let i=0; i<len; i++){
+        if(str[i] === " ") continue;
+        else{
+            count++;
+        }
 
-        // } 
-        count ++
+
     }
-    return count
+    console.log(count)
 }
+fxn(str)
 
-
-
-console.log(lenwithoutspace(str2));
