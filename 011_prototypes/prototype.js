@@ -6,7 +6,7 @@ console.log(myName.length); // prints 11
 
 // console.log(myName.trim().length) // prints 6
 
-// create a method to show the true length of the string (without using the 'trim' method)
+// create a method to show the true length of the string (without using the 'trim' method directly)
 
 // associate a method which does the task for all strings
 

@@ -1,9 +1,9 @@
 /*
-JavaScript works on prototypical inheritance
+JavaScript works on prototypal inheritance
 
 
 
-level of prototypical inheritance in JS:
+level of prototypal inheritance in JS:
 
 
 
@@ -28,7 +28,7 @@ We can say that in JS, everything is an Object
 */
 
 
-// function's prototypical behaviour demo
+// function's prototypal behaviour demo
 
 
 let multiplyByTen = function(num){
@@ -43,7 +43,7 @@ multiplyByTen.power = 12;
 
 console.log(multiplyByTen.power) // prints 12
 
-console.log(multiplyByTen.prototype) // prints {} : this means that the function supoports prototypical behaviour. initially the prototype is an empty object
+console.log(multiplyByTen.prototype) // prints {} : this means that the function supoports prototypal behaviour. initially the prototype is an empty object
 
 
 // ---------------------------------------------------------
