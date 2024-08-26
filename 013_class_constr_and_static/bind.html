@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button
+        >
+    <button id="button2">Button Clicked</button>
+</body>
+<script>
+ 
+ class React {
+    constructor(){
+        this.library  = "React";
+        this.server = "http://localhost:3000";
+
+        // requirements: 
+        // 1. to get the reference of the button
+        // 2. to do something when the button is clicked
+
+
+        // ---------------------------
+        document.querySelector('button')
+        .addEventListener('click', this.handleClick)
+
+        
+
+        
+        // using Bind in #button2
+
+        document.querySelector("#button2")
+        .addEventListener('click', this.handleClick.bind(this))
+
+        //  button clicked
+        // React {librrary: 'React', server: 'https://localhost:3000 .......contd'}
+    }
+
+
+
+    handleClick(){
+        console.log("button clicked");
+        // console.log(this.server) // prints undefined (when first button is clicked)
+
+        console.log(this) // <button>Button Clicked</button>
+
+
+        // HOW TO SEE THE DETAILS OF THE SERVER ALSO?
+        // ans: use bind keyword in React class  (used in the second button)
+        console.log(this.server)
+    }
+ }
+
+ const app = new React()
+</script>
+</html>
