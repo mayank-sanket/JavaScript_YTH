@@ -1,3 +1,5 @@
+// error prone code 
+
 class User {
     constructor(email, password){
         this.email = email;
