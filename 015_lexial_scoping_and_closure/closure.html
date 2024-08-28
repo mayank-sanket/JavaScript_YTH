@@ -1,0 +1,46 @@
+<!-- NOTE: whenever you return a function instead of calling it, the whole LEXICAL SCOPE of the function is passed and not only the execution scope
+ 
+
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: gray;">
+
+  <script>
+    function makeFunc(){
+        let name = "Mayank Sanket";
+        function displayName(){
+            console.log(name);
+        }
+
+        return displayName; // note that here the function is not called but its reference is returned
+    }
+
+    const myFunc = makeFunc(); 
+
+    myFunc(); 
+
+    /* IMPORTANT: 
+
+
+    NOTE: when a function is executed, it gets removed from the call stack after execution
+
+    // in the case above, since we have returned the function 'displayName' and not executed it inside the parent function, therefore alongwith it, the LEXICAL SCOPE of the function displayName (and not only executional context) is also returned (which includes displayName and the makeFunc functions)
+
+    // by doing this, we have can print the value of 'name' 
+    
+    
+    */
+
+  </script>
+    
+</body>
+</html>

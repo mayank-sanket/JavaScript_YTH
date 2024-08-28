@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: gray;">
+
+    <button id="orange">Orange</button>
+    <button id="blue">Blue</button>
+    
+</body>
+<script>
+
+// method 1: 
+
+// document.getElementById("orange").onclick = function(){
+//         document.body.style.backgroundColor = "orange"
+//     }
+
+//     document.getElementById("blue").onclick = function(){
+//         document.body.style.backgroundColor = "blue"
+//     }
+
+
+    // method 2: 
+
+    document.getElementById("orange").onclick = clickHandler("orange");
+    document.getElementById("blue").onclick = clickHandler("blue"); 
+    
+
+
+  function clickHandler(color){
+
+
+
+   function colorChangerfxn (){
+
+    // note: we needed to wrap the below code in the function colorChangerfxn because if we did not do it, then the color would have automatically changed to blue (whatever written at later part) because of direct execution of 'clickHandler' function
+
+
+    document.body.style.backgroundColor = `${color}`;
+
+
+    // in this approach, we are just returning the function and not calling it (this passes the lexical scope fo the function therefore it has access to the 'color' variable also)
+
+
+   }
+   return colorChangerfxn;  // returning the colorChangerfxn alongwith its lexical scope
+
+
+
+
+
+
+//    note: 2 syntaxes:
+
+/*   function outer(){
+
+      function inner(){
+      
+      
+      }  
+      return inner;
+     
+}
+
+
+-------------------
+
+function outer(){
+return function inner(){
+
+}
+
+}
+
+
+*/
+  }
+  
+</script>
+</html>

@@ -1,13 +1,23 @@
-function createUser(username, score){
-    this.score = score;
-    this.username = username;
+class User{
+constructor(name, age){
+    this._age = age;
+    this._name = name;
+
+   
+}
+get name(){
+    return `${this._name} is coding`
 }
 
-createUser.protoprintMe = function(username){
-    console.log(`My username is ${this.username}`)
+set name(value){
+    this._name = value
 }
 
 
-const mayank = new createUser("mayank", 45);
 
-mayank.printMe()
+}
+
+
+const ms = new User("mayank", 22)
+
+console.log(ms.name)
