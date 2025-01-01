@@ -40,6 +40,7 @@ const emptyObj = {}
 if(Object.keys(emptyObj).length===0){
     console.log("empty object")
 }
+// IMPORTANT: 
 
 // note: if you do Object.keys(name_of_object) then it returns an array with the keys of the object : that means in the line 39 we are checking the length of that array if it equals 0 or not
 

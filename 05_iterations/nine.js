@@ -63,7 +63,7 @@ console.log(`                       and the net percentage is ${totalScore/5}`)
 
 //-----------------------------------------------------------
 
-// example 1 without arrow function (using callback function)
+// example 1 without arrow function (using standard function)
 
 const scores2 = [10, 11, 12, 13]
 const initval9 = 0
@@ -103,7 +103,7 @@ const shoppingCart = [
     }
 ]
 
-const portalFee = 200 // iniital value (mandatory to pay)
-const totalPayingAmt = shoppingCart.reduce((acc,item ) => acc + item.price, portalFee)
+const portalFee = 200 // initial value (mandatory to pay)
+const totalPayingAmt = shoppingCart.reduce((acc,item) => acc + item.price, portalFee)
 
 console.log(totalPayingAmt)

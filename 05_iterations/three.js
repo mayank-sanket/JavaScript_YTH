@@ -49,7 +49,7 @@ Map(3) {
 
 // for of loop in maps
 for (const key of map) {
-    console.log(key) // prints as array
+    console.log(key) // prints as arrays
     /*
 [ 'IN', 'India' ]
 [ 'USA', 'United States of America' ]
@@ -85,4 +85,4 @@ Fr  :-  France
     
 // }  
 
-// the above snippet will give error as objects are not iteratable like maps. to iterate through objects, there are other ways (for of does not work with objects)
+// the above snippet will give ERROR as objects are not iteratable like maps. to iterate through objects, there are other ways (for of does not work with objects)

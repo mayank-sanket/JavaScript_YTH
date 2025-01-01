@@ -35,7 +35,7 @@ let age = 22
 let isLoggedIn = true
 
 // number (range: )
-// bigint  (used in stock trading or large websites, such as Facebook, etc)
+// BigInt  (used in stock trading or large websites, such as Facebook, etc)
 // string (can be used in single quotes as well as double quotes)
 // boolean (true/false)
 // null : it is actually a stand-alone value
