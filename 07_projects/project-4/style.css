@@ -92,3 +92,6 @@ html {
     text-align: center;
   }
   
+  .pointer:hover{
+    cursor: pointer;
+  }
