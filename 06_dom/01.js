@@ -1,1 +1,1 @@
-// All DOM selectors NodeList and HTMLCollection
+// All DOM selectors NodeList and HTMLCollection concepts
