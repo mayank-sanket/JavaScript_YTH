@@ -1,1 +1,1 @@
-Create a Digital Clock which shows time in HH:MM:SS format
+Create a Digital Clock which shows time in HH:MM:SS format  (very easy)

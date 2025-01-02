@@ -1,1 +1,1 @@
-create a BMI calculator
+create a BMI calculator (very easy)

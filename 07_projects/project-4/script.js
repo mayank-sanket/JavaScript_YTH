@@ -57,10 +57,10 @@ function checkGuess(guess) {
         endGame();
     }
     else if (guess < randomNumber) {
-        displayMessage(`Guess is too LOW`);
+        displayMessage(`Please enter a larger number`);
     }
     else if (guess > randomNumber) {
-        displayMessage(`Guess is too HIGH`);
+        displayMessage(`Please enter a smaller number`);
     }
 }
 

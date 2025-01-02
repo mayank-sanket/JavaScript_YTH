@@ -66,6 +66,8 @@ html {
   
   .guesses {
     background-color: #7a7a7a;
+    padding: 8px;
+    margin-left: 1rem;
   }
   
   #wrapper {

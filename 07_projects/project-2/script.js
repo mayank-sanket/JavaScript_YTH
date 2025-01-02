@@ -1,10 +1,7 @@
 const form = document.querySelector('form')
-
-
-
-
-
 const bmi =  (weight /((height*height)/10000)).toFixed(2);
+
+
 form.addEventListener('submit', function(e){
     e.preventDefault() // to stop it from submitting 
 
