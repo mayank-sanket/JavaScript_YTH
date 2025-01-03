@@ -1,4 +1,4 @@
-let randomNumber = parseInt(Math.random() * 100 + 1)
+let randomNumber = parseInt(Math.random() * 100 + 1);
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
@@ -67,9 +67,9 @@ function checkGuess(guess) {
 
 function displayGuess(guess) {
     userInput.value = '' // cleanup method
-    guessSlot.innerHTML += `${guess}`;
+    guessSlot.innerHTML += `${guess}, `;
     numOfGuess++;
-    remaining.innerHTML = `${11 - numOfGuess}`;
+    remaining.innerHTML = `${11 - numOfGuess}`
 }
 
 function displayMessage(message) {
