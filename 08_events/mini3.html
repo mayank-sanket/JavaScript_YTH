@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-</head>
-<body style="background-color: #212121; color: #fff;">
-    <h3 style="text-align: center;">Press the key and see magic</h3>
-    <div id="insert">
-
-    </div>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <h3 style="text-align: center">Press the key and see magic</h3>
+    <div id="insert"></div>
 
     <script>
-    const insert = document.getElementById('insert')
-    window.addEventListener('keydown', (e) =>{
+      const insert = document.getElementById("insert");
+      window.addEventListener("keydown", (e) => {
         insert.innerHTML = `<div class = 'color'>
         <table>
   <tr>
@@ -23,18 +20,13 @@
     <th>Code</th>
   </tr>
   <tr>
-    <td>${e.key ===" "? "Space": e.key }</td>
-    <td>${e.keyCode}</td> 
-f    <td>${e.code }</td>
+    <td>${e.key === " " ? "Space" : e.key}</td>
+    <td>${e.keyCode}</td>    <td>${e.code}</td>
   </tr>
   
 </table>
-
-
-
-
-            </div>`
-    })
+ </div>`;
+      });
     </script>
-</body>
+  </body>
 </html>
