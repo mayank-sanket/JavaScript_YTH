@@ -93,6 +93,7 @@ const promiseFive = new Promise(function(resolve, reject){
         }
     }, 1000)
 })
+
 // async await
 // here you must use try catch otherwise in case of error, you will face problems 
 
