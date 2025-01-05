@@ -3,7 +3,6 @@ let accountEmail = "mayank@gmail.com"
 var accountPassword = "x7ThalaForA_Reason"
 accountCity = "Bhopal" //JS supports this way of creating variables also (not recommended tho)
 
-// note: semi-colon is optional in JS
 
 // accountState;    // this will throw an error
 let accountState; // this variable is just declared and has no value. if you print this, it will print "undefined"

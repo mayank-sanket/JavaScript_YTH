@@ -55,7 +55,8 @@ console.log(valueOfStringInInt) // prints NaN
 //_____________________________________
 
 /*
-"33 " => 33
+"33" => 33
+"33      " =>33
 "33abc" => NaN
 true => 1; false =>0; 
 
@@ -83,7 +84,7 @@ console.log(booleanIsLoggedIn3) // prints true
 
 let someNumber = 332
 let stringSomeNumber = String(someNumber)
-console.log(stringSomeNumber) // prints 332 (string) | in order to verify this, do this: 
+console.log(stringSomeNumber) // prints 332 (string) 
 
 console.log(typeof stringSomeNumber) // prints string
 

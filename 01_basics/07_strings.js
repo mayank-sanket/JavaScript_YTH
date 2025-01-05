@@ -1,7 +1,6 @@
-// You can use both '' and "" for strings in JS
+
 
 // old syntax for concatenation:
-
 const name = "Mayank "
 const repoCount = 50
 
@@ -23,9 +22,6 @@ console.log(`Hello, my name is ${name2} and I am a ${profession}. I have ${repoC
 const name3 = "Priyank"
 console.log(`Hello, my name is ${name3} and my name has total ${name3.length} characters in it.`) // prints Hello, my name is Priyank and my name has total 7 characters in it.
 
-// this type of syntax is used in writing code these days and similarly you can use other functions with this in the variables, fxns, etc
-
-// ++++++++++++++++++++++++++++
 // another syntax to declare strings unlike the previous ones
 
 const gameName = new String('PUBG')   // using objects way
@@ -136,5 +132,3 @@ const veryBigString2 = "mayank is a very good developer"
 console.log(veryBigString2.split(" ")) // [ 'mayank', 'is', 'a', 'very', 'good', 'developer' ]
 
 console.log(veryBigString2.split(" ", 3)) // prints the first 3 elements in the array: [ 'mayank', 'is', 'a' ]
-
-// read more about string methods in MDN docs and do practice

@@ -24,6 +24,7 @@ console.log(myDate.toString()) // prints like: Fri Feb 02 2024 07:55:07 GMT+0530
 
 
 
+// no need to memorise
 
 console.log(myDate.toString()); // Fri Feb 02 2024 08:03:44 GMT+0530 (India Standard Time)
 console.log(myDate.toLocaleString()); // 2/2/2024, 8:03:44 AM
