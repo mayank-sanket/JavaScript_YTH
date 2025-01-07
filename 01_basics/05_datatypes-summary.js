@@ -57,8 +57,4 @@ myFunction(); // function being called
 console.log(typeof myFunction); // prints funciton  || it is a function object (a kind of object)
 
 
-
-
-// note: if you console.log(typeof any_none_primitive_type) then you get object in the output (in case of functions, you get function as the output which is basically an object function)
-
-// 
+// note: if you console.log(typeof any_non_primitive_type) then you get object in the output (in case of functions, you get function as the output which is basically an object function)

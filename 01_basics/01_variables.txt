@@ -25,6 +25,8 @@ var a = 5;
 
 console.log(b); // ReferenceError: b is not defined
 let b = 10;
+
+
 Redeclaration:
 
 Variables declared with var can be redeclared within the same scope without any error. This behavior can lead to accidental reassignments and make code harder to maintain.
@@ -36,6 +38,8 @@ var x = 10; // No error with var
 
 let y = 20;
 let y = 30; // SyntaxError: Identifier 'y' has already been declared
+
+
 Temporal Dead Zone (TDZ):
 
 When using let and const, there is a concept called the Temporal Dead Zone (TDZ). This is the period between entering the scope and the actual declaration where accessing the variable results in a ReferenceError.

@@ -1,5 +1,5 @@
 const score = 400 // JS automatically defines it as number
-console.log(score) // prints 400 on Node RTE and Browser as well
+console.log(score) 
 
 // but how to explicitly define numbers?
 
@@ -118,9 +118,9 @@ console.log(Math.floor((Math.random()*6)+1)) // prints integer values from 1 to 
 const min = 10
 const max = 20
 
-console.log(Math.floor(Math.random()*(max -min) + min))  // so that you don't get values like 2, 3, etc instead of 12, 14, etc 
+console.log(Math.floor(Math.random()*(max -min + 1) + min))  
 
-// note that we did not use (max - min + 1) here because we want to include 10 as well, if we didn't have to do so, we could have used (max - min + 1) | Hitesh sir used: console.log(Math.floor(Math.random()*(max - min + 1)) + min)
+
 
 
 

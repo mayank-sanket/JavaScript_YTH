@@ -14,9 +14,12 @@ console.log(course.courseInstructor) // Hitesh Choudhary
 
 // Destructuring using {}
 
+// 
 const {courseInstructor} = course
-console.log(courseInstructor) // prints Hitesh Choudhary
 
+const {courseName, price} = course
+console.log(courseName) // JavaScript in Hindi
+console.log(courseInstructor) // Hitesh Choudhary
 
 
 // setting aliases
