@@ -1,0 +1,3 @@
+1. Local Storage, Session Storage, Cookies
+2. Intersection Observer API
+3. Headers, etc.
